@@ -1,0 +1,1 @@
+# Adsterra no requiere ads.txt para Native/Social Bar. Si añades AdSense u otra red, pega aquí sus líneas oficiales.

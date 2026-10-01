@@ -1,0 +1,121 @@
+---
+import site from "../data/site.json";
+interface Props { limit?: number; showTabs?: boolean }
+const { limit = 0, showTabs = true } = Astro.props;
+const cfg = (site as any).schedule;
+---
+{cfg && (
+  <section class="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm" id="schedule" data-schedule data-limit={limit}>
+    <div class="flex flex-wrap items-center justify-between gap-3">
+      <h2 class="text-xl font-bold text-slate-900">{cfg.title}</h2>
+      <span class="text-xs text-slate-400" data-tz></span>
+    </div>
+    {showTabs && (
+      <div class="mt-4 flex flex-wrap gap-2" role="tablist">
+        {cfg.leagues.map((l: any, i: number) => (
+          <button type="button" role="tab" data-league={l.id} aria-selected={i === 0 ? "true" : "false"}
+            class="rounded-full border border-slate-200 px-3 py-1.5 text-sm font-medium text-slate-600 aria-selected:border-transparent aria-selected:bg-[color:var(--accent)] aria-selected:text-[color:var(--accent-ink)]">
+            {l.name}
+          </button>
+        ))}
+      </div>
+    )}
+    <div class="mt-4 min-h-[120px]" data-list aria-live="polite">
+      <p class="text-sm text-slate-500" data-loading>{cfg.loading}</p>
+    </div>
+    <noscript><p class="mt-3 text-sm text-slate-500">{cfg.noscript}</p></noscript>
+    <p class="mt-4 text-xs leading-5 text-slate-400">{cfg.source}</p>
+  </section>
+)}
+{cfg && (
+  <script is:inline define:vars={{ cfg, lang: site.locale.replace("_", "-") }}>
+    (function () {
+      var root = document.querySelector("[data-schedule]");
+      if (!root) return;
+      var list = root.querySelector("[data-list]");
+      var limit = parseInt(root.getAttribute("data-limit") || "0", 10);
+      var tabs = root.querySelectorAll("[data-league]");
+      var tz = root.querySelector("[data-tz]");
+      try { tz.textContent = Intl.DateTimeFormat().resolvedOptions().timeZone; } catch (e) {}
+      function ymd(d) { return d.getFullYear() + ("0" + (d.getMonth() + 1)).slice(-2) + ("0" + d.getDate()).slice(-2); }
+      var days = [];
+      for (var i = -1; i <= 7; i++) days.push(ymd(new Date(Date.now() + i * 864e5)));
+      var range = days[0] + "-" + days[days.length - 1];
+      var dayFmt = new Intl.DateTimeFormat(lang, { weekday: "long", day: "numeric", month: "long" });
+      var timeFmt = new Intl.DateTimeFormat(lang, { hour: "2-digit", minute: "2-digit" });
+      function esc(s) { return String(s).replace(/[&<>"]/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]; }); }
+      function render(events, isNext) {
+        if (!events.length) { list.innerHTML = '<p class="text-sm text-slate-500">' + esc(cfg.empty) + "</p>"; return; }
+        events.sort(function (a, b) { return new Date(a.date) - new Date(b.date); });
+        if (limit) events = events.slice(0, limit);
+        var html = isNext ? '<p class="mb-1 rounded-lg bg-slate-50 px-3 py-2 text-xs text-slate-500">' + esc(cfg.nextLabel) + "</p>" : "", lastDay = "";
+        events.forEach(function (ev) {
+          var c = (ev.competitions && ev.competitions[0]) || {};
+          var teams = c.competitors || [];
+          var home = teams.filter(function (t) { return t.homeAway === "home"; })[0] || teams[0] || {};
+          var away = teams.filter(function (t) { return t.homeAway === "away"; })[0] || teams[1] || {};
+          var d = new Date(ev.date); var day = dayFmt.format(d);
+          if (day !== lastDay) { html += '<h3 class="mt-5 mb-2 text-sm font-semibold capitalize text-slate-500">' + esc(day) + "</h3>"; lastDay = day; }
+          var st = (ev.status && ev.status.type) || {};
+          var score = st.state === "pre" ? timeFmt.format(d) : (home.score || "0") + " - " + (away.score || "0");
+          var tag = st.state === "in" ? '<span class="ml-2 rounded bg-red-100 px-1.5 py-0.5 text-[10px] font-bold uppercase text-red-700">' + esc(cfg.live) + "</span>" : st.state === "post" ? '<span class="ml-2 text-[10px] uppercase text-slate-400">' + esc(cfg.finished) + "</span>" : "";
+          html += '<div class="flex items-center justify-between gap-3 rounded-xl border border-slate-100 px-3 py-2.5 text-sm"><span class="min-w-0 flex-1 truncate font-medium text-slate-800">' + esc((home.team && home.team.displayName) || "") + ' <span class="text-slate-400">vs</span> ' + esc((away.team && away.team.displayName) || "") + "</span><span class=\"shrink-0 tabular-nums text-slate-600\">" + esc(score) + tag + "</span></div>";
+        });
+        list.innerHTML = html;
+      }
+      function fetchDay(id, d) {
+        return fetch("https://site.api.espn.com/apis/site/v2/sports/soccer/" + id + "/scoreboard?limit=100&dates=" + d)
+          .then(function (r) { return r.json(); })
+          .then(function (j) { return j.events || []; })
+          .catch(function () { return null; });
+      }
+      var token = 0;
+      function windowEvents(id) {
+        var key = "sch2:" + id + ":" + range;
+        try { var c = JSON.parse(sessionStorage.getItem(key) || "null"); if (c && Date.now() - c.t < 600000) return Promise.resolve(c.e); } catch (e) {}
+        return Promise.all(days.map(function (d) { return fetchDay(id, d); })).then(function (res) {
+          if (res.every(function (x) { return x === null; })) return null;
+          var seen = {}, out = [], now = Date.now();
+          res.forEach(function (arr) { (arr || []).forEach(function (ev) {
+            if (seen[ev.id]) return; seen[ev.id] = 1;
+            var t = new Date(ev.date).getTime();
+            if (t < now - 4 * 36e5 || t > now + 7 * 864e5) return;
+            out.push(ev);
+          }); });
+          try { sessionStorage.setItem(key, JSON.stringify({ t: Date.now(), e: out })); } catch (x) {}
+          return out;
+        });
+      }
+      function nextEvents(id) {
+        return fetch("https://site.api.espn.com/apis/site/v2/sports/soccer/" + id + "/scoreboard?limit=100")
+          .then(function (r) { return r.json(); })
+          .then(function (j) { return (j.events || []).filter(function (ev) { return new Date(ev.date).getTime() >= Date.now() - 4 * 36e5; }); })
+          .catch(function () { return []; });
+      }
+      function select(id) { tabs.forEach(function (x) { x.setAttribute("aria-selected", x.getAttribute("data-league") === id ? "true" : "false"); }); }
+      function load(id) {
+        var my = ++token;
+        list.innerHTML = '<p class="text-sm text-slate-500">' + esc(cfg.loading) + "</p>";
+        windowEvents(id).then(function (out) {
+          if (my !== token) return;
+          if (out === null) { list.innerHTML = '<p class="text-sm text-slate-500">' + esc(cfg.error) + "</p>"; return; }
+          if (out.length) { render(out); return; }
+          nextEvents(id).then(function (e) { if (my === token) render(e, e.length > 0); });
+        });
+      }
+      if (tabs.length) {
+        tabs.forEach(function (b) {
+          b.addEventListener("click", function () { select(b.getAttribute("data-league")); load(b.getAttribute("data-league")); });
+        });
+      }
+      // Primera carga: elegir la primera liga que tenga partidos en los próximos días.
+      var order = cfg.leagues.map(function (l) { return l.id; });
+      (function pick(i) {
+        if (i >= order.length) { select(order[0]); load(order[0]); return; }
+        windowEvents(order[i]).then(function (out) {
+          if (out && out.length) { select(order[i]); load(order[i]); } else pick(i + 1);
+        });
+      })(0);
+    })();
+  </script>
+)}

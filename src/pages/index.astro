@@ -1,7 +1,77 @@
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
-  </head>
-  <body></body>
-</html>
+---
+import Layout from "../layouts/Layout.astro";
+import site from "../data/site.json";
+import PlatformCard from "../components/PlatformCard.astro";
+import PlatformTable from "../components/PlatformTable.astro";
+import Faq from "../components/Faq.astro";
+import Notice from "../components/Notice.astro";
+import AdSlot from "../components/AdSlot.astro";
+import ScheduleWidget from "../components/ScheduleWidget.astro";
+
+const h = site.home;
+const origin = (Astro.site ?? new URL(`https://${site.domain}`)).origin;
+const ld = [
+  {
+    "@context": "https://schema.org", "@type": "ItemList", name: h.platformsHeading,
+    itemListElement: site.platforms.map((p, i) => ({ "@type": "ListItem", position: i + 1, name: p.name, url: p.url })),
+  },
+  {
+    "@context": "https://schema.org", "@type": "FAQPage",
+    mainEntity: h.faq.map((f) => ({ "@type": "Question", name: f.q, acceptedAnswer: { "@type": "Answer", text: f.a } })),
+  },
+];
+---
+<Layout title={h.title} description={h.description} jsonLd={ld}>
+  <section class="rounded-3xl bg-white p-6 shadow-sm ring-1 ring-slate-200 sm:p-10">
+    <p class="text-xs font-semibold uppercase tracking-wider text-[color:var(--accent)]">{site.ui.updated}: {site.updatedLabel}</p>
+    <h1 class="mt-2 text-3xl font-extrabold leading-tight text-slate-900 sm:text-4xl">{h.h1}</h1>
+    <p class="mt-4 max-w-3xl text-base leading-7 text-slate-600">{h.intro}</p>
+    <div class="mt-6 flex flex-wrap gap-3">
+      <a href="#plataformas" class="btn-accent rounded-xl px-5 py-3 text-sm font-semibold">{h.cta}</a>
+      {site.pages[0] && <a href={`/${site.pages[0].slug}/`} class="rounded-xl border border-slate-300 px-5 py-3 text-sm font-semibold text-slate-700 hover:bg-slate-50">{site.pages[0].navLabel}</a>}
+    </div>
+  </section>
+
+  <div class="mt-6"><Notice /></div>
+
+  {(site as any).schedule && <div class="mt-8"><ScheduleWidget limit={12} showTabs={true} /></div>}
+
+  <AdSlot slot={0} />
+
+  <section id="plataformas" class="mt-12 scroll-mt-20">
+    <h2 class="text-2xl font-bold text-slate-900">{h.platformsHeading}</h2>
+    <p class="mt-2 max-w-3xl text-slate-600">{h.platformsIntro}</p>
+    <div class="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+      {site.platforms.map((p) => <PlatformCard p={p} />)}
+    </div>
+  </section>
+
+  <section class="mt-12">
+    <h2 class="text-2xl font-bold text-slate-900">{h.tableHeading}</h2>
+    <div class="mt-4"><PlatformTable items={site.platforms} /></div>
+  </section>
+
+  <AdSlot slot={1} />
+
+  <section class="mt-12">
+    <h2 class="text-2xl font-bold text-slate-900">{h.whyHeading}</h2>
+    <div class="prose-site mt-2 max-w-3xl">
+      {h.whyBody.map((t) => <p>{t}</p>)}
+    </div>
+  </section>
+
+  <section class="mt-12">
+    <h2 class="text-2xl font-bold text-slate-900">{h.guidesHeading}</h2>
+    <div class="mt-4 grid gap-4 sm:grid-cols-2">
+      {site.pages.map((p) => (
+        <a href={`/${p.slug}/`} class="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm transition hover:shadow-md">
+          <h3 class="font-semibold text-slate-900">{p.h1}</h3>
+          <p class="mt-1 text-sm leading-6 text-slate-600">{p.description}</p>
+          <span class="mt-3 inline-block text-sm font-semibold text-[color:var(--accent)]">{site.ui.readMore} →</span>
+        </a>
+      ))}
+    </div>
+  </section>
+
+  <Faq items={h.faq} heading={h.faqHeading} />
+</Layout>

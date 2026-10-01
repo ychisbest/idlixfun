@@ -1,0 +1,73 @@
+---
+import "../styles/global.css";
+import site from "../data/site.json";
+import { ads } from "../config/ads";
+
+interface Props { title: string; description: string; jsonLd?: object[]; noindex?: boolean }
+const { title, description, jsonLd = [], noindex = false } = Astro.props;
+const origin = (Astro.site ?? new URL(`https://${site.domain}`)).origin;
+const canonical = new URL(Astro.url.pathname, origin).href;
+const ld = [
+  { "@context": "https://schema.org", "@type": "WebSite", name: site.name, url: origin + "/", inLanguage: site.lang },
+  ...jsonLd,
+];
+const year = new Date().getFullYear();
+---
+<!doctype html>
+<html lang={site.lang} style={`--accent:${site.accent};--accent-ink:${site.accentInk};--accent-soft:${site.accentSoft};`}>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
+    {noindex && <meta name="robots" content="noindex,follow" />}
+    <meta name="theme-color" content={site.accent} />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content={site.locale} />
+    <meta property="og:site_name" content={site.name} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    {ld.map((o) => <script type="application/ld+json" set:html={JSON.stringify(o)} />)}
+  </head>
+  <body class="bg-slate-50 text-slate-900 antialiased">
+    <a href="#main" class="sr-only focus:not-sr-only focus:fixed focus:left-3 focus:top-3 focus:z-50 focus:rounded-lg focus:bg-white focus:px-3 focus:py-2">{site.ui.skip}</a>
+    <header class="sticky top-0 z-40 border-b border-slate-200 bg-white/90 backdrop-blur">
+      <div class="mx-auto flex max-w-5xl flex-col gap-2 px-4 py-3 sm:flex-row sm:items-center sm:justify-between sm:gap-4">
+        <a href="/" class="flex shrink-0 items-center gap-2 whitespace-nowrap font-bold text-slate-900">
+          <span class="btn-accent grid h-8 w-8 place-items-center rounded-lg text-sm">{site.initial}</span>
+          <span>{site.name}</span>
+        </a>
+        <nav aria-label="main" class="-mx-4 flex gap-4 overflow-x-auto whitespace-nowrap px-4 pb-1 text-sm text-slate-600 sm:mx-0 sm:px-0 sm:pb-0">
+          {site.nav.map((n) => <a class="hover:text-slate-900" href={n.href}>{n.label}</a>)}
+        </nav>
+      </div>
+    </header>
+    <main id="main" class="mx-auto max-w-5xl px-4 pb-16 pt-8">
+      <slot />
+    </main>
+    <footer class="border-t border-slate-200 bg-white">
+      <div class="mx-auto max-w-5xl px-4 py-8 text-sm text-slate-500">
+        <p class="max-w-3xl leading-6">{site.ui.footerDisclaimer}</p>
+        <nav aria-label="legal" class="mt-4 flex flex-wrap gap-x-5 gap-y-2">
+          {site.footerLinks.map((n) => <a class="hover:text-slate-900 hover:underline" href={n.href}>{n.label}</a>)}
+        </nav>
+        <p class="mt-4">© {year} {site.name}. {site.ui.rights}</p>
+      </div>
+    </footer>
+    {ads.adsterra.socialBarSrc && (
+      <script is:inline define:vars={{ src: ads.adsterra.socialBarSrc }}>
+        window.addEventListener("load", function () {
+          setTimeout(function () {
+            var s = document.createElement("script"); s.async = true; s.src = src; document.body.appendChild(s);
+          }, 2500);
+        });
+      </script>
+    )}
+  </body>
+</html>

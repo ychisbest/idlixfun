@@ -1,0 +1,37 @@
+---
+import site from "../data/site.json";
+import { ads } from "../config/ads";
+
+interface Props { slot?: number }
+const { slot = 0 } = Astro.props;
+const cfg = ads.adsterra.native[slot];
+const id = cfg ? `ad-wrap-${slot}-${cfg.containerId}` : "";
+---
+{cfg && (
+  <section id={id} class="my-10" aria-label={site.ui.adLabel} data-ad-wrap>
+    <div class="mx-auto max-w-3xl rounded-2xl border border-slate-200 bg-white p-3 shadow-sm">
+      <p class="mb-2 text-center text-[11px] font-semibold uppercase tracking-wider text-slate-400">{site.ui.adLabel}</p>
+      <div class="min-h-[120px]" data-ad-slot>
+        <div id={cfg.containerId}></div>
+      </div>
+    </div>
+  </section>
+)}
+{cfg && (
+  <script is:inline define:vars={{ id, src: cfg.src }}>
+    (function () {
+      var w = document.getElementById(id);
+      if (!w) return;
+      var load = function () {
+        if (w.dataset.loaded) return;
+        w.dataset.loaded = "1";
+        var s = document.createElement("script");
+        s.async = true; s.setAttribute("data-cfasync", "false"); s.src = src;
+        w.querySelector("[data-ad-slot]").insertBefore(s, w.querySelector("[data-ad-slot]").firstChild);
+      };
+      if (!("IntersectionObserver" in window)) { load(); return; }
+      var io = new IntersectionObserver(function (e) { if (e[0].isIntersecting) { load(); io.disconnect(); } }, { rootMargin: "400px 0px" });
+      io.observe(w);
+    })();
+  </script>
+)}

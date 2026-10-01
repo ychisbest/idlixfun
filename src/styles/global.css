@@ -1,1 +1,25 @@
 @import "tailwindcss";
+
+:root {
+  --accent: #2563eb;
+  --accent-ink: #ffffff;
+  --accent-soft: #eff6ff;
+}
+
+html { scroll-behavior: smooth; }
+body { font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; }
+
+.prose-site h2 { font-size: 1.5rem; line-height: 2rem; font-weight: 700; margin: 2.25rem 0 0.75rem; color: #0f172a; }
+.prose-site h3 { font-size: 1.15rem; font-weight: 600; margin: 1.5rem 0 0.5rem; color: #0f172a; }
+.prose-site p { margin: 0.9rem 0; line-height: 1.75; color: #334155; }
+.prose-site ul { margin: 0.9rem 0; padding-left: 1.25rem; list-style: disc; color: #334155; }
+.prose-site ol { margin: 0.9rem 0; padding-left: 1.25rem; list-style: decimal; color: #334155; }
+.prose-site li { margin: 0.35rem 0; line-height: 1.7; }
+.prose-site a { color: var(--accent); text-decoration: underline; text-underline-offset: 2px; }
+.prose-site strong { color: #0f172a; }
+
+.btn-accent {
+  background: var(--accent);
+  color: var(--accent-ink);
+}
+.btn-accent:hover { filter: brightness(0.92); }

@@ -1,0 +1,22 @@
+---
+import Layout from "../layouts/Layout.astro";
+import site from "../data/site.json";
+import Breadcrumbs from "../components/Breadcrumbs.astro";
+const doc = (site.legal as any).privacy;
+---
+<Layout title={doc.title} description={doc.description}>
+  <Breadcrumbs current={doc.title} />
+  <article class="rounded-3xl bg-white p-6 shadow-sm ring-1 ring-slate-200 sm:p-10">
+    <h1 class="text-3xl font-extrabold text-slate-900">{doc.title}</h1>
+    <p class="mt-2 text-sm text-slate-500">{site.ui.updated}: {site.updatedLabel}</p>
+    <div class="prose-site mt-4 max-w-3xl">
+      {doc.sections.map((s: any) => (
+        <>
+          <h2>{s.h2}</h2>
+          {(s.paras ?? []).map((t: string) => <p>{t}</p>)}
+          {s.bullets && <ul>{s.bullets.map((t: string) => <li>{t}</li>)}</ul>}
+        </>
+      ))}
+    </div>
+  </article>
+</Layout>

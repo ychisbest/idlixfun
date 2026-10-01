@@ -1,0 +1,8 @@
+---
+import site from "../data/site.json";
+interface Props { current: string }
+const { current } = Astro.props;
+---
+<nav aria-label="breadcrumb" class="mb-4 text-sm text-slate-500">
+  <a class="hover:underline" href="/">{site.ui.home}</a> <span aria-hidden="true">/</span> <span class="text-slate-700">{current}</span>
+</nav>

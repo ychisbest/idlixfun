@@ -1,0 +1,22 @@
+---
+import site from "../data/site.json";
+interface Props { p: { name: string; url: string; kind: string; kindLabel: string; blurb: string; bestFor?: string } }
+const { p } = Astro.props;
+const tone: Record<string, string> = {
+  free: "bg-emerald-50 text-emerald-700 ring-emerald-200",
+  sub: "bg-indigo-50 text-indigo-700 ring-indigo-200",
+  tv: "bg-amber-50 text-amber-800 ring-amber-200",
+  mixed: "bg-sky-50 text-sky-700 ring-sky-200",
+};
+---
+<article class="flex flex-col rounded-2xl border border-slate-200 bg-white p-5 shadow-sm transition hover:shadow-md">
+  <div class="flex items-start justify-between gap-3">
+    <h3 class="text-lg font-semibold text-slate-900">{p.name}</h3>
+    <span class={`shrink-0 rounded-full px-2.5 py-1 text-xs font-medium ring-1 ${tone[p.kind] ?? tone.mixed}`}>{p.kindLabel}</span>
+  </div>
+  <p class="mt-2 text-sm leading-6 text-slate-600">{p.blurb}</p>
+  {p.bestFor && <p class="mt-2 text-xs text-slate-500"><span class="font-semibold text-slate-700">{site.ui.bestFor}:</span> {p.bestFor}</p>}
+  <a href={p.url} target="_blank" rel="noopener noreferrer" class="btn-accent mt-4 inline-flex items-center justify-center rounded-xl px-4 py-2.5 text-sm font-semibold">
+    {site.ui.visitOfficial} →
+  </a>
+</article>

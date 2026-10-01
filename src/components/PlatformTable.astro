@@ -1,0 +1,25 @@
+---
+import site from "../data/site.json";
+interface Props { items: { name: string; url: string; kindLabel: string; bestFor?: string }[] }
+const { items } = Astro.props;
+---
+<div class="overflow-x-auto rounded-2xl border border-slate-200 bg-white">
+  <table class="w-full min-w-[520px] text-left text-sm">
+    <thead class="bg-slate-50 text-xs uppercase tracking-wide text-slate-500">
+      <tr>
+        <th class="px-4 py-3">{site.ui.colPlatform}</th>
+        <th class="px-4 py-3">{site.ui.colType}</th>
+        <th class="px-4 py-3">{site.ui.colBestFor}</th>
+      </tr>
+    </thead>
+    <tbody class="divide-y divide-slate-100">
+      {items.map((p) => (
+        <tr>
+          <td class="px-4 py-3 font-medium"><a class="text-[color:var(--accent)] hover:underline" href={p.url} target="_blank" rel="noopener noreferrer">{p.name}</a></td>
+          <td class="px-4 py-3 text-slate-600">{p.kindLabel}</td>
+          <td class="px-4 py-3 text-slate-600">{p.bestFor ?? ""}</td>
+        </tr>
+      ))}
+    </tbody>
+  </table>
+</div>
