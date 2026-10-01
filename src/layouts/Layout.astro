@@ -3,10 +3,14 @@ import "../styles/global.css";
 import site from "../data/site.json";
 import { ads } from "../config/ads";
 
-interface Props { title: string; description: string; jsonLd?: object[]; noindex?: boolean }
-const { title, description, jsonLd = [], noindex = false } = Astro.props;
+interface Props { title: string; description: string; jsonLd?: object[]; noindex?: boolean; hero?: string }
+const { title, description, jsonLd = [], noindex = false, hero } = Astro.props;
 const origin = (Astro.site ?? new URL(`https://${site.domain}`)).origin;
 const canonical = new URL(Astro.url.pathname, origin).href;
+const path = Astro.url.pathname.replace(/\/$/, "") || "/home";
+const heroSlug = path === "/home" ? "home" : path.replace(/^\//, "").replace(/\//g, "-");
+const heroSrc = hero ?? `/backgrounds/${heroSlug}.jpg`;
+const heroAbs = new URL(heroSrc, origin).href;
 const ld = [
   { "@context": "https://schema.org", "@type": "WebSite", name: site.name, url: origin + "/", inLanguage: site.lang },
   ...jsonLd,
@@ -14,7 +18,7 @@ const ld = [
 const year = new Date().getFullYear();
 ---
 <!doctype html>
-<html lang={site.lang} style={`--accent:${site.accent};--accent-ink:${site.accentInk};--accent-soft:${site.accentSoft};`}>
+<html lang={site.lang} class="theme-dark" style={`--accent:${site.accent};--accent-ink:${site.accentInk};--accent-soft:${site.accentSoft};`}>
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -22,7 +26,7 @@ const year = new Date().getFullYear();
     <meta name="description" content={description} />
     <link rel="canonical" href={canonical} />
     {noindex && <meta name="robots" content="noindex,follow" />}
-    <meta name="theme-color" content={site.accent} />
+    <meta name="theme-color" content="#070709" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta property="og:type" content="website" />
     <meta property="og:locale" content={site.locale} />
@@ -30,34 +34,37 @@ const year = new Date().getFullYear();
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:url" content={canonical} />
-    <meta name="twitter:card" content="summary" />
+    <meta property="og:image" content={heroAbs} />
+    <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={heroAbs} />
     {ld.map((o) => <script type="application/ld+json" set:html={JSON.stringify(o)} />)}
   </head>
-  <body class="bg-slate-50 text-slate-900 antialiased">
+  <body class="theme-dark antialiased">
+    <div class="hero-bg" style={`background-image:url('${heroSrc}')`} aria-hidden="true"></div>
     <a href="#main" class="sr-only focus:not-sr-only focus:fixed focus:left-3 focus:top-3 focus:z-50 focus:rounded-lg focus:bg-white focus:px-3 focus:py-2">{site.ui.skip}</a>
-    <header class="sticky top-0 z-40 border-b border-slate-200 bg-white/90 backdrop-blur">
-      <div class="mx-auto flex max-w-5xl flex-col gap-2 px-4 py-3 sm:flex-row sm:items-center sm:justify-between sm:gap-4">
-        <a href="/" class="flex shrink-0 items-center gap-2 whitespace-nowrap font-bold text-slate-900">
-          <span class="btn-accent grid h-8 w-8 place-items-center rounded-lg text-sm">{site.initial}</span>
+    <header class="site-header">
+      <div class="mx-auto flex max-w-6xl flex-col gap-2 px-5 py-3 sm:flex-row sm:items-center sm:justify-between sm:gap-6">
+        <a href="/" class="flex shrink-0 items-center gap-2 whitespace-nowrap text-sm font-semibold tracking-tight text-white">
+          <span class="btn-accent grid h-7 w-7 place-items-center rounded-md text-xs">{site.initial}</span>
           <span>{site.name}</span>
         </a>
-        <nav aria-label="main" class="-mx-4 flex gap-4 overflow-x-auto whitespace-nowrap px-4 pb-1 text-sm text-slate-600 sm:mx-0 sm:px-0 sm:pb-0">
-          {site.nav.map((n) => <a class="hover:text-slate-900" href={n.href}>{n.label}</a>)}
+        <nav aria-label="main" class="-mx-5 flex gap-5 overflow-x-auto whitespace-nowrap px-5 pb-1 text-sm text-zinc-400 sm:mx-0 sm:px-0 sm:pb-0">
+          {site.nav.map((n) => <a class="hover:text-white" href={n.href}>{n.label}</a>)}
         </nav>
       </div>
     </header>
-    <main id="main" class="mx-auto max-w-5xl px-4 pb-16 pt-8">
+    <main id="main" class="relative z-[1] mx-auto max-w-6xl px-5 pb-20 pt-6">
       <slot />
     </main>
-    <footer class="border-t border-slate-200 bg-white">
-      <div class="mx-auto max-w-5xl px-4 py-8 text-sm text-slate-500">
+    <footer class="site-footer">
+      <div class="mx-auto max-w-6xl px-5 py-10 text-sm text-zinc-500">
         <p class="max-w-3xl leading-6">{site.ui.footerDisclaimer}</p>
         <nav aria-label="legal" class="mt-4 flex flex-wrap gap-x-5 gap-y-2">
-          {site.footerLinks.map((n) => <a class="hover:text-slate-900 hover:underline" href={n.href}>{n.label}</a>)}
+          {site.footerLinks.map((n) => <a class="hover:text-white" href={n.href}>{n.label}</a>)}
         </nav>
-        <p class="mt-4">© {year} {site.name}. {site.ui.rights}</p>
+        <p class="mt-6 text-xs">© {year} {site.name}. {site.ui.rights}</p>
       </div>
     </footer>
     {ads.adsterra.socialBarSrc && (

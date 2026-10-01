@@ -407,6 +407,52 @@
           "a": "Sebagian besar layanan punya aplikasi untuk merek Smart TV populer. Jika tidak kompatibel, streaming stick bisa jadi solusi."
         }
       ]
+    },
+    {
+      "slug": "aplikasi-resmi-bukan-apk",
+      "navLabel": "Aplikasi resmi, bukan APK",
+      "title": "IDLIX App? Pakai aplikasi resmi, jangan unduh APK tidak dikenal",
+      "description": "Jawaban untuk pencarian aplikasi IDLIX: situs ini tidak menyediakan APK. Gunakan aplikasi resmi dari toko perangkat.",
+      "h1": "Mencari aplikasi IDLIX? Jangan pasang APK tidak resmi",
+      "intro": "IDLIX bukan layanan berlisensi, dan file APK yang mengatasnamakannya sering berisi iklan berbahaya. Yang aman adalah aplikasi resmi layanan streaming, diunduh dari toko perangkat.",
+      "platforms": [
+        "Vidio",
+        "WeTV",
+        "Viu",
+        "Netflix",
+        "Vision+"
+      ],
+      "platformsHeading": "Aplikasi resmi yang bisa dipasang",
+      "sections": [
+        {
+          "h2": "Kenapa APK berisiko",
+          "bullets": [
+            "Bukan dari toko resmi, jadi tidak ada pemeriksaan malware yang sama.",
+            "Sering meminta izin notifikasi, akses file, atau pemasangan sumber tidak dikenal.",
+            "Nama aplikasinya mirip layanan terkenal, pengembangnya bukan pemilik layanan."
+          ]
+        },
+        {
+          "h2": "Cara memasang yang benar",
+          "steps": [
+            "Buka Google Play, App Store, atau toko Smart TV.",
+            "Cari nama layanan resminya, bukan “IDLIX”.",
+            "Cocokkan nama pengembang dengan pemilik layanan sebelum memasang."
+          ]
+        },
+        {
+          "h2": "Kalau yang dicari drama Korea",
+          "paras": [
+            "Viu, WeTV, dan iQIYI punya katalog drama dengan subtitle Indonesia. Cek judulnya di aplikasi resmi sebelum berlangganan. Situs ini tidak menayangkan video."
+          ]
+        }
+      ],
+      "faq": [
+        {
+          "q": "Apakah idlix.fun menyediakan file instalasi?",
+          "a": "Tidak. Kami tidak meng-host APK, tidak menautkan ke situs tanpa lisensi, dan tidak menyiarkan film."
+        }
+      ]
     }
   ],
   "legal": {

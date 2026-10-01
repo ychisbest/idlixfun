@@ -37,10 +37,10 @@ const related = site.pages.filter((p) => p.slug !== page.slug).slice(0, 4);
 ---
 <Layout title={page.title} description={page.description} jsonLd={ld}>
   <Breadcrumbs current={page.navLabel} />
-  <article class="rounded-3xl bg-white p-6 shadow-sm ring-1 ring-slate-200 sm:p-10">
-    <p class="text-xs font-semibold uppercase tracking-wider text-[color:var(--accent)]">{site.ui.updated}: {site.updatedLabel}</p>
-    <h1 class="mt-2 text-3xl font-extrabold leading-tight text-slate-900 sm:text-4xl">{page.h1}</h1>
-    <p class="mt-4 max-w-3xl text-base leading-7 text-slate-600">{page.intro}</p>
+  <article class="hero-panel">
+    <p class="text-xs font-semibold uppercase tracking-[0.18em] text-zinc-400">{site.ui.updated} · {site.updatedLabel}</p>
+    <h1 class="mt-4 text-white">{page.h1}</h1>
+    <p class="mt-6 max-w-2xl text-lg leading-8 text-zinc-300">{page.intro}</p>
 
     {page.showSchedule && (site as any).schedule && <div class="mt-8"><ScheduleWidget showTabs={true} /></div>}
 
