@@ -8,8 +8,8 @@
   "accentInk": "#ffffff",
   "accentSoft": "#f5f3ff",
   "published": "2026-10-01",
-  "updated": "2026-10-01",
-  "updatedLabel": "1 Oktober 2026",
+  "updated": "2026-10-05",
+  "updatedLabel": "5 Oktober 2026",
   "nav": [
     {
       "label": "Beranda",
@@ -66,10 +66,10 @@
     "notFoundBody": "Halaman yang Anda cari tidak ada atau sudah dipindahkan."
   },
   "home": {
-    "title": "IDLIX: Alternatif Legal untuk Nonton Film dan Serial Online",
-    "description": "Mencari IDLIX? Lihat layanan resmi gratis dan berlangganan untuk nonton film dan serial dengan aman, tanpa pop-up dan penipuan.",
-    "h1": "IDLIX: alternatif legal untuk nonton film dan serial",
-    "intro": "Daftar layanan resmi, termasuk yang gratis dengan iklan, untuk nonton film dan serial di ponsel, komputer, dan TV. Tanpa pop-up menyesatkan dan tanpa risiko bagi perangkat Anda.",
+    "title": "IDLIX: yang tayang minggu ini di Vidio, Netflix, dan WeTV",
+    "description": "Mencari IDLIX? Daftar minggu ini ada di Vidio, Netflix, WeTV, Viu, dan iQIYI. Situs ini tidak memberi alamat bajakan.",
+    "h1": "IDLIX: cek yang tayang di layanan resmi minggu ini",
+    "intro": "Yang berubah setiap minggu bukan halaman ini, melainkan katalog Vidio, Netflix, dan WeTV. Buka situs resmi untuk judul yang sedang tayang.",
     "cta": "Lihat layanan resmi",
     "platformsHeading": "Tempat nonton film dan serial (layanan resmi)",
     "platformsIntro": "Setiap layanan punya katalog dan harga sendiri. Bandingkan lalu pilih yang sesuai dengan yang ingin Anda tonton sekarang.",
@@ -105,6 +105,35 @@
       {
         "q": "Apakah situs ini menyiarkan film?",
         "a": "Tidak. Kami panduan independen yang menunjukkan pilihan resmi dan mengarahkan Anda ke situs masing-masing layanan."
+      }
+    ],
+    "freshHeading": "Cek rilis resmi minggu ini",
+    "freshIntro": "Kami tidak menyalin jadwal dari situs mirror. Daftar yang berlaku ada di layanan ini.",
+    "fresh": [
+      {
+        "name": "Vidio",
+        "url": "https://www.vidio.com",
+        "note": "Siaran dan serial resmi di Indonesia."
+      },
+      {
+        "name": "Netflix",
+        "url": "https://www.netflix.com/id/",
+        "note": "Katalog Indonesia. Yang baru minggu ini ada di akun resmi."
+      },
+      {
+        "name": "WeTV",
+        "url": "https://wetv.vip",
+        "note": "Drama dan serial berlisensi."
+      },
+      {
+        "name": "Viu",
+        "url": "https://www.viu.com",
+        "note": "Drama Korea dan serial regional yang berlisensi."
+      },
+      {
+        "name": "iQIYI",
+        "url": "https://www.iq.com",
+        "note": "Serial berlisensi, bukan APK tidak dikenal."
       }
     ]
   },

@@ -36,6 +36,23 @@ const ld = [
 
   {(site as any).schedule && <div class="mt-8"><ScheduleWidget limit={12} showTabs={true} /></div>}
 
+  {Array.isArray((h as any).fresh) && (h as any).fresh.length > 0 && (
+    <section id="semana" class="mt-8 scroll-mt-20">
+      <h2 class="text-2xl font-bold text-slate-900">{(h as any).freshHeading}</h2>
+      <p class="mt-2 max-w-3xl text-slate-600">{(h as any).freshIntro}</p>
+      <ul class="mt-4 grid gap-3 sm:grid-cols-2">
+        {(h as any).fresh.map((item: { name: string; url: string; note: string }) => (
+          <li>
+            <a href={item.url} target="_blank" rel="noopener noreferrer" class="block rounded-2xl border border-slate-200 bg-white p-4 shadow-sm hover:shadow-md">
+              <span class="font-semibold text-slate-900">{item.name}</span>
+              <span class="mt-1 block text-sm leading-6 text-slate-600">{item.note}</span>
+            </a>
+          </li>
+        ))}
+      </ul>
+    </section>
+  )}
+
   <AdSlot slot={0} />
 
   <section id="plataformas" class="mt-12 scroll-mt-20">
