@@ -601,5 +601,15 @@
         }
       ]
     }
+  },
+  "partner": {
+    "url": "https://futbollibre.pw/",
+    "lang": "es",
+    "footerLabel": "Rekomendasi",
+    "heading": "Suka sepak bola?",
+    "anchor": "Futbol Libre Legal",
+    "desc": "Jadwal pertandingan Liga Champions, Liga Meksiko, dan liga top lainnya dalam waktu lokal Anda, plus platform resmi untuk menontonnya. Situs ini berbahasa Spanyol.",
+    "cta": "Buka Futbol Libre Legal",
+    "note": "ES"
   }
 }
