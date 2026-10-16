@@ -8,8 +8,8 @@
   "accentInk": "#ffffff",
   "accentSoft": "#f5f3ff",
   "published": "2026-10-01",
-  "updated": "2026-10-05",
-  "updatedLabel": "5 Oktober 2026",
+  "updated": "2026-10-16",
+  "updatedLabel": "16 Oktober 2026",
   "nav": [
     {
       "label": "Beranda",
@@ -67,48 +67,64 @@
   },
   "home": {
     "title": "IDLIX: yang tayang minggu ini di Vidio, Netflix, dan WeTV",
-    "description": "Mencari IDLIX? Daftar minggu ini ada di Vidio, Netflix, WeTV, Viu, dan iQIYI. Situs ini tidak memberi alamat bajakan.",
+    "description": "Mencari IDLIX (juga dieja idlik, idflix, idlx)? Panduan legal: yang tayang minggu ini di Vidio, Netflix, WeTV, Viu, iQIYI. Alternatif, keamanan, aplikasi resmi, dan film gratis di halaman terpisah — tanpa link/alamat bajakan.",
     "h1": "IDLIX: cek yang tayang di layanan resmi minggu ini",
-    "intro": "Yang berubah setiap minggu bukan halaman ini, melainkan katalog Vidio, Netflix, dan WeTV. Buka situs resmi untuk judul yang sedang tayang.",
+    "intro": "Orang mencari «idlix» (kadang dieja idlik, idflix, atau idlx) biasanya ingin tahu di mana nonton film dan serial. Halaman ini adalah panduan legal, bukan pemutar bajakan: yang berubah tiap minggu adalah katalog Vidio, Netflix, WeTV, Viu, dan iQIYI. Untuk alternatif IDLIX, keamanan (termasuk «tidak bisa dibuka»), aplikasi resmi (bukan APK), film gratis legal, dan drama Korea, pakai panduan yang ditautkan di bawah — supaya tiap niat landing di URL yang tepat.",
     "cta": "Lihat layanan resmi",
     "platformsHeading": "Tempat nonton film dan serial (layanan resmi)",
-    "platformsIntro": "Setiap layanan punya katalog dan harga sendiri. Bandingkan lalu pilih yang sesuai dengan yang ingin Anda tonton sekarang.",
+    "platformsIntro": "Setiap layanan punya katalog dan harga sendiri. Bandingkan Vidio, Netflix, WeTV, Viu, iQIYI, dan lainnya di bawah; detail alternatif, keamanan, dan aplikasi resmi ada di panduan terpisah.",
     "tableHeading": "Perbandingan singkat",
     "whyHeading": "Mengapa memilih layanan resmi",
     "whyBody": [
-      "Situs tidak resmi hidup dari pop-up, iklan menyesatkan, dan pengalihan, serta berganti alamat tanpa pemberitahuan. Layanan resmi menawarkan stabilitas, kualitas gambar yang baik, dan keamanan.",
-      "Dengan menggabungkan katalog gratis dan langganan jangka pendek, Anda bisa menonton banyak judul dengan biaya kecil tanpa mempertaruhkan data pribadi."
+      "Situs yang menjanjikan «semua film gratis» atau «link terbaru» tanpa lisensi hidup dari pop-up, iklan menyesatkan, dan ganti alamat. Layanan resmi (Vidio, Netflix, WeTV, Viu, iQIYI, Vision+) memberi kualitas, stabilitas, dan risiko lebih rendah untuk perangkat Anda.",
+      "Beranda ini menutupi merek pencarian IDLIX (termasuk ejaan idlik, idflix, idlx) dan peta «minggu ini di layanan resmi». Cluster alternatif, keamanan (termasuk «tidak bisa dibuka»), aplikasi/APK, film gratis legal, dan drama Korea punya URL sendiri: supaya Google dan pengunjung menemukan niat yang tepat tanpa mengubah beranda menjadi landing link bajakan."
     ],
     "guidesHeading": "Panduan nonton film dan serial",
     "faqHeading": "Pertanyaan umum",
     "faq": [
       {
-        "q": "Apakah ada cara legal untuk nonton film gratis?",
-        "a": "Ada. Beberapa layanan seperti Vidio, WeTV, iQIYI, Viu, dan YouTube Film menyediakan sebagian konten gratis dengan iklan. Katalognya terbatas dibanding paket berbayar."
+        "q": "Apa itu IDLIX?",
+        "a": "Dalam pencarian, IDLIX biasanya merujuk ke situs tidak resmi yang menjanjikan film dan serial gratis. Panduan ini tidak menayangkan atau menautkan alamat bajakan: kami mengarahkan ke Vidio, Netflix, WeTV, Viu, iQIYI, dan layanan resmi lain. Ejaan mirip (idlik, idflix, idlx) sering mengarah ke niat yang sama."
       },
       {
         "q": "Apakah IDLIX layanan resmi?",
-        "a": "Bukan. Situs bernama IDLIX adalah situs tidak resmi yang umumnya menyediakan film tanpa izin pemegang hak cipta, dan alamatnya sering berganti. Kami tidak merekomendasikannya dan tidak menautkannya."
+        "a": "Bukan. Situs bernama IDLIX umumnya menyediakan film tanpa izin pemegang hak cipta, dan alamatnya sering berganti. Kami tidak merekomendasikannya dan tidak menautkannya."
       },
       {
-        "q": "Mengapa situs nonton ilegal berisiko?",
-        "a": "Banyak yang bergantung pada pop-up dan iklan menyesatkan, bisa mengarahkan ke penipuan atau unduhan berbahaya, dan sering diblokir sehingga alamatnya berubah-ubah."
+        "q": "Di mana alternatif IDLIX?",
+        "a": "Di /alternatif-idlix/ . Bandingkan Vidio, Netflix, WeTV, Viu, iQIYI, dan platform resmi lain — tanpa daftar mirror."
       },
       {
-        "q": "Bagaimana cara nonton banyak film tanpa bayar mahal?",
-        "a": "Gunakan layanan gratis berisi iklan, lalu berlangganan bergantian: bayar satu platform, selesaikan serial yang diinginkan, kemudian berhenti dan pindah ke yang lain."
+        "q": "IDLIX aman atau tidak? / tidak bisa dibuka?",
+        "a": "Jangan anggap situs seperti itu sebagai layanan resmi. Risiko, kenapa sering «tidak bisa dibuka», dan pilihan legal: /idlix-aman-atau-tidak/ ."
       },
       {
-        "q": "Apakah katalog selalu sama?",
-        "a": "Tidak. Judul bisa masuk atau keluar dari platform sewaktu-waktu. Selalu cek langsung di situs resmi sebelum berlangganan."
+        "q": "Ada aplikasi IDLIX atau APK-nya?",
+        "a": "Kami tidak menyediakan APK. Untuk niat «aplikasi IDLIX» / «idlix aplikasi», baca /aplikasi-resmi-bukan-apk/ — unduh hanya dari Google Play atau App Store milik layanan resmi."
+      },
+      {
+        "q": "Bagaimana nonton film gratis / «idlix free» secara legal?",
+        "a": "Vidio, WeTV, iQIYI, Viu, YouTube Film, dan Vision+ punya konten gratis beriklan. Detail: /nonton-film-gratis-legal/ ."
+      },
+      {
+        "q": "Di mana nonton drama Korea sub Indo?",
+        "a": "Viu, WeTV, iQIYI, Netflix, dan Vidio. Panduan: /nonton-drama-korea-legal/ ."
+      },
+      {
+        "q": "Apakah Anda punya link terbaru / alamat / daftar bajakan IDLIX?",
+        "a": "Tidak. Kami tidak memuat daftar domain mirror, link terbaru, atau alamat bajakan. Gunakan aplikasi atau situs resmi pemegang hak."
       },
       {
         "q": "Apakah situs ini menyiarkan film?",
         "a": "Tidak. Kami panduan independen yang menunjukkan pilihan resmi dan mengarahkan Anda ke situs masing-masing layanan."
+      },
+      {
+        "q": "Bagaimana cara nonton banyak film tanpa bayar mahal?",
+        "a": "Gunakan layanan gratis berisi iklan, lalu berlangganan bergantian: bayar satu platform, selesaikan serial yang diinginkan, kemudian berhenti dan pindah ke yang lain. Lihat juga /nonton-film-gratis-legal/ dan /alternatif-idlix/ ."
       }
     ],
     "freshHeading": "Cek rilis resmi minggu ini",
-    "freshIntro": "Kami tidak menyalin jadwal dari situs mirror. Daftar yang berlaku ada di layanan ini.",
+    "freshIntro": "Kami tidak menyalin jadwal dari situs mirror. Daftar yang berlaku ada di layanan resmi di bawah. Untuk alternatif IDLIX dan keamanan, buka panduan terkait.",
     "fresh": [
       {
         "name": "Vidio",
@@ -215,49 +231,90 @@
     {
       "slug": "alternatif-idlix",
       "navLabel": "Alternatif IDLIX",
-      "title": "Alternatif IDLIX: Situs dan Aplikasi Nonton Film Legal 2026",
-      "description": "Cari alternatif IDLIX yang aman dan legal? Ini layanan resmi untuk nonton film dan serial, termasuk yang gratis dengan iklan.",
+      "title": "Alternatif IDLIX 2026: Platform Nonton Film Legal (Vidio, Netflix, WeTV)",
+      "description": "Alternatif IDLIX dan pencarian «idlix link alternatif»: bandingkan Vidio, Netflix, WeTV, Viu, iQIYI. Aman dan legal — tanpa daftar mirror/alamat bajakan.",
       "h1": "Alternatif IDLIX: tempat nonton film dan serial yang legal",
-      "intro": "Kalau Anda mencari IDLIX, ini pilihan resmi untuk nonton film dan serial dengan kualitas bagus dan tanpa risiko bagi perangkat Anda.",
-      "platformsHeading": "Layanan resmi untuk nonton film dan serial",
+      "intro": "Kalau Anda mencari alternatif IDLIX atau «idlix link alternatif», tujuan biasanya katalog luas dan nonton tanpa ribet. Panduan ini tidak menampilkan mirror atau alamat bajakan; kami membandingkan Vidio, Netflix, WeTV, Viu, iQIYI, dan layanan resmi lain yang legal serta relatif aman.",
+      "platformsHeading": "Layanan resmi sebagai alternatif IDLIX",
       "sections": [
         {
-          "h2": "Apa yang biasanya dicari",
+          "h2": "Apa yang biasanya dicari sebagai alternatif IDLIX",
           "paras": [
-            "Orang yang mencari situs seperti ini umumnya ingin katalog besar, biaya murah, dan pemakaian mudah. Kombinasi layanan gratis dan langganan bergilir bisa mendekati kebutuhan itu."
+            "Pencarian «alternatif idlix», «idlix link alternatif», atau «seperti idlix tapi aman» punya niat yang sama: film dan serial tanpa gangguan. Jawaban legalnya adalah situs dan aplikasi resmi pemegang hak — bukan daftar domain bernomor yang berganti setiap minggu.",
+            "Halaman ini adalah target utama untuk alternatif IDLIX. Beranda hanya ringkasan merek dan «minggu ini di layanan resmi»; perbandingan mendalam ada di sini."
+          ]
+        },
+        {
+          "h2": "Perbandingan alternatif IDLIX (layanan resmi)",
+          "paras": [
+            "Ringkasan di bawah membantu memilih cepat. Harga dan katalog berubah; cek di situs resmi sebelum berlangganan."
+          ],
+          "bullets": [
+            "Vidio — gratis + berlangganan; konten lokal, siaran, olahraga.",
+            "WeTV — gratis + VIP; drama China, Korea, Thailand.",
+            "iQIYI — gratis + VIP; drama Asia dan variety.",
+            "Viu — gratis + premium; drakor dengan subtitle Indonesia.",
+            "Vision+ — gratis + berlangganan; TV nasional dan film lokal.",
+            "Netflix — berlangganan; serial orisinal dan katalog luas.",
+            "Prime Video / CATCHPLAY+ — berlangganan atau sewa film.",
+            "YouTube Film — gratis beriklan atau sewa/beli satuan."
           ]
         },
         {
           "h2": "Langkah menyusun pilihan Anda",
           "steps": [
-            "Mulai dari layanan gratis berisi iklan seperti Vidio, WeTV, iQIYI, Viu, dan YouTube Film.",
+            "Mulai dari layanan gratis beriklan: Vidio, WeTV, iQIYI, Viu, YouTube Film, Vision+.",
             "Jika mencari judul tertentu, cari tahu platform mana yang menayangkannya lalu berlangganan sebulan saja.",
-            "Berhenti setelah selesai menonton dan pindah ke platform lain saat ada judul baru yang menarik."
+            "Berhenti setelah selesai menonton dan pindah ke platform lain saat ada judul baru.",
+            "Pertanyaan keamanan / «tidak bisa dibuka»: /idlix-aman-atau-tidak/ . Soal APK: /aplikasi-resmi-bukan-apk/ . Film gratis detail: /nonton-film-gratis-legal/ ."
           ]
         },
         {
           "h2": "Cara memilih layanan berbayar",
           "bullets": [
-            "Lihat katalog sebelum membayar, karena tiap platform punya judul eksklusif.",
-            "Bandingkan paket dengan iklan jika tersedia, biasanya lebih murah.",
-            "Periksa jumlah layar yang bisa dipakai bersamaan bila ingin patungan dengan keluarga."
+            "Lihat katalog sebelum membayar; tiap platform punya judul eksklusif.",
+            "Bandingkan paket dengan iklan jika tersedia — biasanya lebih murah.",
+            "Periksa jumlah layar bersamaan bila patungan keluarga.",
+            "Bayar hanya di domain resmi platform; jangan percaya halaman «pembayaran alternatif»."
+          ]
+        },
+        {
+          "h2": "Drama Korea dan film gratis",
+          "paras": [
+            "Untuk drakor sub Indo: /nonton-drama-korea-legal/ . Untuk fokus gratis legal (termasuk niat «idlix free»): /nonton-film-gratis-legal/ . Beranda (/) tetap hub merek IDLIX dan jadwal resmi minggu ini."
           ]
         }
       ],
       "faq": [
         {
-          "q": "Mana alternatif gratis terbaik?",
-          "a": "Tergantung yang ingin ditonton. Vidio dan Vision+ cocok untuk konten lokal, WeTV, iQIYI, dan Viu untuk drama Asia, dan YouTube Film untuk film satuan."
+          "q": "Alternatif IDLIX terbaik mana?",
+          "a": "Tidak ada satu «terbaik». Konten lokal: Vidio/Vision+. Drama Asia: WeTV/iQIYI/Viu. Serial global: Netflix/Prime. Film satuan: YouTube Film atau CATCHPLAY+."
+        },
+        {
+          "q": "Apakah situs seperti IDLIX termasuk alternatif legal?",
+          "a": "Tidak. Alternatif IDLIX di panduan ini adalah platform resmi pemegang hak. Situs tanpa lisensi bukan alternatif legal."
+        },
+        {
+          "q": "Kenapa tidak ada daftar link / alamat / mirror?",
+          "a": "Karena ini panduan legal. Kami tidak melakukan SEO mirror atau «link terbaru». Jawaban aman selalu layanan resmi."
+        },
+        {
+          "q": "Apa bedanya beranda dengan halaman ini?",
+          "a": "Beranda menutupi merek IDLIX dan ringkasan minggu ini di layanan resmi. Pencarian alternatif IDLIX dan perbandingan platform dikumpulkan di halaman ini."
+        },
+        {
+          "q": "IDLIX netflix / official / web — maksudnya apa?",
+          "a": "Seringkali orang membandingkan IDLIX dengan Netflix atau mencari «versi resmi». Pakai Netflix (atau Vidio/WeTV) langsung dari situs/aplikasi resmi; jangan cari «idlix official web» bajakan."
         }
       ]
     },
     {
       "slug": "idlix-aman-atau-tidak",
       "navLabel": "IDLIX aman atau tidak?",
-      "title": "IDLIX Aman atau Tidak? Risiko dan Pilihan Legal",
-      "description": "Pahami risiko situs seperti IDLIX (pop-up, penipuan, malware, alamat berganti) dan temukan cara aman nonton film dan serial.",
+      "title": "IDLIX Aman atau Tidak? Risiko, Tidak Bisa Dibuka, dan Pilihan Legal",
+      "description": "IDLIX aman atau tidak? Juga untuk «idlix tidak bisa dibuka»: risiko pop-up, malware, alamat berganti, plus pilihan legal di Vidio/Netflix/WeTV. Tanpa daftar mirror.",
       "h1": "IDLIX aman dan legal? Yang perlu diketahui sebelum membuka",
-      "intro": "Situs dengan nama mirip IDLIX muncul dan hilang terus. Sebelum membuka salah satunya, pahami dulu risikonya.",
+      "intro": "«IDLIX aman atau tidak?» sering muncul karena situs bernama mirip terus muncul dan hilang. Jawaban singkat: jangan anggap itu layanan streaming resmi. Pahami risikonya — termasuk kenapa sering «tidak bisa dibuka» — lalu pindah ke pilihan legal.",
       "platforms": [
         "Vidio",
         "WeTV",
@@ -267,51 +324,84 @@
       "platformsHeading": "Pilihan gratis dan resmi",
       "sections": [
         {
+          "h2": "IDLIX aman atau tidak — jawaban singkat",
+          "paras": [
+            "Jika Anda bertanya IDLIX aman atau tidak, sebagian besar situs yang muncul di hasil pencarian bukan platform berlisensi. Sulit mengharapkan audit keamanan mandiri, identitas perusahaan yang jelas, atau domain yang stabil. Karena itu panduan ini tidak merekomendasikannya.",
+            "Nonton yang lebih aman = situs atau aplikasi resmi pemegang hak (Vidio, Netflix, WeTV, Viu, iQIYI, dll.). Daftar alternatif: /alternatif-idlix/ ."
+          ]
+        },
+        {
           "h2": "Situs seperti apa ini",
           "paras": [
-            "Ini situs tidak resmi yang umumnya menayangkan film dan serial tanpa izin pemegang hak. Saat diblokir, mereka muncul lagi dengan alamat dan nama yang mirip."
+            "Umumnya situs tidak resmi yang menayangkan film dan serial tanpa izin pemegang hak. Saat diblokir, mereka muncul lagi dengan nama dan alamat mirip. Pencarian «link terbaru» atau «alamat» memperpanjang siklus itu; kami tidak menyimpan daftar mirror."
           ]
         },
         {
           "h2": "Risiko utama",
           "bullets": [
             "Pop-up dan pengalihan ke penipuan, judi online, atau unduhan yang tidak diinginkan.",
-            "Iklan yang menyamar sebagai pembaruan browser atau pemutar video.",
-            "Permintaan mendaftar atau membayar yang tidak aman.",
-            "Tidak stabil: alamat bisa mati dan katalog hilang tanpa pemberitahuan."
+            "Iklan yang menyamar sebagai pembaruan browser, pemutar video, atau APK.",
+            "Permintaan daftar atau bayar di halaman yang tidak aman.",
+            "Tidak stabil: alamat mati dan katalog hilang tanpa pemberitahuan.",
+            "Risiko data pribadi dan perangkat — terutama jika memasang APK atau file dari Telegram."
+          ]
+        },
+        {
+          "h2": "«IDLIX tidak bisa dibuka» — kenapa sering terjadi",
+          "paras": [
+            "Trends menunjukkan banyak orang mencari «idlix tidak bisa dibuka». Penyebab tipikal: domain diblokir ISP, sertifikat/HTTPS bermasalah, situs diganti alamat, atau peramban memblokir skrip berbahaya. Itu sinyal ketidakstabilan — bukan alasan mencari mirror berikutnya.",
+            "Yang sebaiknya dilakukan: tutup tab, jangan paksa lewat VPN gelap atau APK «perbaikan», lalu buka layanan resmi. Untuk niat aplikasi: /aplikasi-resmi-bukan-apk/ . Untuk film gratis legal: /nonton-film-gratis-legal/ ."
+          ],
+          "steps": [
+            "Jangan unduh «patch», «apk perbaikan», atau ekstensi dari iklan di halaman error.",
+            "Periksa apakah notifikasi/perizinan aneh sudah diberikan ke situs itu; cabut jika ada.",
+            "Gunakan Vidio, Netflix, WeTV, Viu, atau iQIYI untuk judul yang sama secara legal.",
+            "Baca juga /alternatif-idlix/ untuk peta platform."
           ]
         },
         {
           "h2": "Bagaimana dari sisi hukum",
           "paras": [
-            "Menayangkan karya tanpa lisensi melanggar hak cipta. Konsekuensi terbesar menimpa pengelola situs, tetapi pengguna tetap menghadapi risiko keamanan dan privasi."
+            "Menayangkan karya tanpa lisensi melanggar hak cipta. Konsekuensi terbesar menimpa pengelola situs, tetapi pengguna tetap menghadapi risiko keamanan dan privasi. Jika «IDLIX legal atau tidak?» — untuk salinan tanpa izin, jawabannya mengarah ke tidak."
           ]
         },
         {
           "h2": "Cara menonton tanpa masalah",
           "paras": [
-            "Gunakan layanan resmi. Untuk menghemat, gabungkan layanan gratis dengan langganan jangka pendek dan manfaatkan masa percobaan jika ada."
+            "Pakai layanan resmi. Untuk menghemat, gabungkan katalog gratis beriklan dengan langganan jangka pendek. Hub merek dan minggu ini: beranda (/) ."
           ]
         }
       ],
       "faq": [
+        {
+          "q": "IDLIX aman atau tidak?",
+          "a": "Jangan dipercaya seperti layanan resmi. Risiko pop-up, unduhan menyesatkan, dan ganti alamat tinggi. Pilihan aman ada di kartu platform di bawah dan di /alternatif-idlix/ ."
+        },
+        {
+          "q": "Kenapa IDLIX tidak bisa dibuka?",
+          "a": "Sering karena pemblokiran, domain mati, atau situs berganti alamat. Jangan kejar mirror; pindah ke Vidio/Netflix/WeTV/Viu/iQIYI. Detail langkah di bagian «tidak bisa dibuka» di atas."
+        },
         {
           "q": "Apakah situs ini IDLIX?",
           "a": "Bukan. Ini panduan independen yang tidak terkait dengan situs tersebut. Kami tidak menayangkan konten dan tidak menautkan ke halaman tanpa lisensi."
         },
         {
           "q": "Saya sudah terlanjur membuka situs seperti itu. Apa yang harus dilakukan?",
-          "a": "Tutup tab yang terbuka, jangan instal apa pun, periksa izin notifikasi browser, dan jalankan antivirus bila sempat mengunduh file."
+          "a": "Tutup tab yang terbuka, jangan instal apa pun, periksa izin notifikasi browser, dan jalankan antivirus bila sempat mengunduh file. Lalu beralih ke aplikasi resmi."
+        },
+        {
+          "q": "Mengapa tidak ada daftar alamat / link yang masih aktif?",
+          "a": "Karena kami tidak melakukan SEO mirror atau «idlix terbaru». Jawaban aman selalu platform resmi."
         }
       ]
     },
     {
       "slug": "nonton-film-gratis-legal",
       "navLabel": "Nonton film gratis legal",
-      "title": "Nonton Film Gratis Legal: Layanan Resmi dengan Iklan",
-      "description": "Daftar layanan yang menyediakan film gratis secara resmi di Indonesia: Vidio, WeTV, iQIYI, Viu, YouTube Film, dan lainnya.",
+      "title": "Nonton Film Gratis Legal 2026: Vidio, WeTV, Viu, YouTube Film",
+      "description": "Nonton film gratis legal (juga untuk niat «idlix free» / film gratis): Vidio, WeTV, iQIYI, Viu, YouTube Film, Vision+. Resmi beriklan — bukan situs bajakan.",
       "h1": "Nonton film gratis secara legal: layanan yang menyediakan",
-      "intro": "Anda bisa menonton cukup banyak film tanpa membayar, asalkan bersedia melihat iklan. Berikut pilihan resmi yang umumnya tersedia di Indonesia.",
+      "intro": "Anda bisa menonton cukup banyak film tanpa membayar, asalkan bersedia melihat iklan — termasuk jika niat pencarian Anda «idlix free» atau «film gratis idlix». Berikut pilihan resmi yang umumnya tersedia di Indonesia (juga relevan di Malaysia untuk sebagian platform).",
       "platforms": [
         "Vidio",
         "WeTV",
@@ -323,6 +413,13 @@
       "platformsHeading": "Tempat nonton film gratis",
       "sections": [
         {
+          "h2": "Gratis legal vs niat «idlix free»",
+          "paras": [
+            "Pencarian film gratis yang menempel merek IDLIX sering mendarat di beranda. Niat yang tepat untuk katalog gratis beriklan ada di halaman ini: Vidio, WeTV, iQIYI, Viu, YouTube Film, Vision+ — bukan situs bajakan.",
+            "Bandingkan juga /alternatif-idlix/ jika Anda memilih paket berbayar jangka pendek."
+          ]
+        },
+        {
           "h2": "Bagaimana layanan ini untung",
           "paras": [
             "Layanan gratis menayangkan iklan selama pemutaran sehingga tidak perlu biaya bulanan. Katalognya berubah-ubah dan cenderung berisi judul lama atau segmen tertentu."
@@ -333,32 +430,46 @@
           "bullets": [
             "Film klasik, komedi, dan aksi dari katalog lama.",
             "Film baru jarang tersedia gratis.",
-            "Subtitle dan dubbing berbeda tiap judul."
+            "Subtitle dan dubbing berbeda tiap judul.",
+            "Sebagian episode drama Asia gratis; sisanya VIP."
           ]
         },
         {
           "h2": "Tips memaksimalkan",
           "steps": [
-            "Pasang aplikasi resminya di TV atau ponsel agar ada fitur favorit dan siaran langsung.",
-            "Cari judulnya langsung di layanan karena pencarian Google tidak selalu menampilkan ketersediaan.",
-            "Kombinasikan dua atau tiga layanan gratis untuk memperluas pilihan."
+            "Pasang aplikasi resmi di TV atau ponsel (lihat /aplikasi-resmi-bukan-apk/ — jangan APK tidak dikenal).",
+            "Cari judul langsung di layanan; pencarian Google tidak selalu menampilkan ketersediaan.",
+            "Kombinasikan dua atau tiga layanan gratis untuk memperluas pilihan.",
+            "Keamanan / situs tidak bisa dibuka: /idlix-aman-atau-tidak/ ."
           ]
         }
       ],
       "faq": [
         {
           "q": "Perlu membuat akun?",
-          "a": "Tergantung layanan. Sebagian bisa ditonton tanpa mendaftar, sebagian meminta email untuk membuka fitur seperti daftar favorit."
+          "a": "Tergantung layanan. Sebagian bisa ditonton tanpa mendaftar, sebagian meminta email untuk favorit atau resume."
+        },
+        {
+          "q": "Apakah «idlix free» sama dengan halaman ini?",
+          "a": "Niatnya sering sama (nonton murah/gratis), tetapi isinya harus layanan resmi beriklan — bukan mirror IDLIX. Itulah fokus halaman ini."
+        },
+        {
+          "q": "Bisa benar-benar gratis tanpa iklan?",
+          "a": "Model gratis legal biasanya memakai iklan. Tanpa iklan hampir selalu berarti berlangganan resmi, bukan situs bajakan."
+        },
+        {
+          "q": "Di mana alternatif berbayar jika katalog gratis kurang?",
+          "a": "Lihat /alternatif-idlix/ untuk Netflix, Vidio premium, WeTV VIP, dan lainnya."
         }
       ]
     },
     {
       "slug": "nonton-drama-korea-legal",
       "navLabel": "Drama Korea legal",
-      "title": "Nonton Drama Korea Sub Indo Legal: Layanan Resmi",
-      "description": "Tempat nonton drama Korea dengan subtitle Indonesia secara legal: Viu, WeTV, iQIYI, Netflix, dan lainnya, dengan opsi gratis dan berbayar.",
+      "title": "Nonton Drama Korea Sub Indo Legal: Viu, WeTV, iQIYI, Netflix",
+      "description": "Nonton drama Korea (drakor) sub Indo legal di Viu, WeTV, iQIYI, Netflix, Vidio. Opsi gratis beriklan dan VIP — tanpa situs bajakan.",
       "h1": "Nonton drama Korea sub Indo secara legal",
-      "intro": "Drakor tersedia resmi di banyak platform dengan subtitle Indonesia. Ini cara memilih yang paling cocok dengan kebutuhan Anda.",
+      "intro": "Drakor tersedia resmi di banyak platform dengan subtitle Indonesia. Halaman ini untuk niat drama Korea / sub Indo secara legal — Viu, WeTV, iQIYI, Netflix, Vidio — bukan situs bajakan.",
       "platforms": [
         "Viu",
         "WeTV",
@@ -371,7 +482,7 @@
         {
           "h2": "Pilih berdasarkan judul",
           "paras": [
-            "Setiap platform memegang hak tayang drama tertentu. Cari judulnya langsung di layanan untuk memastikan tersedia sebelum berlangganan."
+            "Setiap platform memegang hak tayang drama tertentu. Cari judulnya langsung di layanan untuk memastikan tersedia sebelum berlangganan. Sebagai peta umum alternatif streaming: /alternatif-idlix/ ."
           ]
         },
         {
@@ -379,13 +490,14 @@
           "bullets": [
             "Paket gratis biasanya berisi iklan dan terkadang tayang lebih lambat.",
             "Paket VIP atau premium menawarkan episode lebih awal, tanpa iklan, dan kualitas lebih tinggi.",
-            "Beberapa layanan memberi masa percobaan untuk pelanggan baru."
+            "Beberapa layanan memberi masa percobaan untuk pelanggan baru.",
+            "Unduh hanya app resmi dari toko: /aplikasi-resmi-bukan-apk/ ."
           ]
         },
         {
           "h2": "Hindari situs tidak resmi",
           "paras": [
-            "Situs yang menjanjikan semua drama gratis sering dipenuhi pop-up dan iklan berbahaya. Layanan resmi lebih aman, stabil, dan subtitle-nya lebih rapi."
+            "Situs yang menjanjikan semua drama gratis sering dipenuhi pop-up dan iklan berbahaya; subtitle juga sering berantakan. Layanan resmi lebih aman dan stabil. Jika Anda datang dari pencarian IDLIX: beranda (/) adalah hub merek; keamanan di /idlix-aman-atau-tidak/ ; film gratis umum di /nonton-film-gratis-legal/ ."
           ]
         }
       ],
@@ -393,14 +505,22 @@
         {
           "q": "Mana yang paling lengkap untuk drakor?",
           "a": "Viu, WeTV, iQIYI, dan Netflix punya katalog drama Korea yang besar, tetapi judul eksklusifnya berbeda-beda. Cek judul yang Anda cari dulu."
+        },
+        {
+          "q": "Apakah ada subtitle Indonesia di layanan resmi?",
+          "a": "Ya, di sebagian besar judul Viu/WeTV/iQIYI/Netflix untuk wilayah Indonesia. Ketersediaan bisa berubah per judul."
+        },
+        {
+          "q": "Boleh pakai situs subtitle ilegal?",
+          "a": "Panduan ini hanya mengarahkan ke platform berlisensi. Hindari situs yang menempelkan file ilegal atau mirror streaming."
         }
       ]
     },
     {
       "slug": "aplikasi-streaming-film",
       "navLabel": "Aplikasi streaming film",
-      "title": "Aplikasi Streaming Film dan Serial Resmi di Indonesia",
-      "description": "Aplikasi streaming resmi untuk nonton film dan serial di ponsel, tablet, dan Smart TV, dengan opsi gratis dan berlangganan.",
+      "title": "Aplikasi Streaming Film Resmi di Indonesia: Vidio, Netflix, Viu",
+      "description": "Aplikasi streaming film resmi di Indonesia: Vidio, Netflix, Viu, Vision+, Prime Video di ponsel dan Smart TV. Unduh dari toko resmi — bukan APK tidak dikenal.",
       "h1": "Aplikasi streaming film dan serial resmi di ponsel dan TV",
       "intro": "Aplikasi resmi menawarkan kualitas gambar, subtitle, dan suara yang lebih baik, dan bisa dipakai di ponsel, tablet, Smart TV, atau streaming stick.",
       "platforms": [
@@ -427,6 +547,9 @@
             "Unduh dari toko resmi perangkat Anda (Google Play, App Store, atau toko Smart TV).",
             "Pastikan pengembangnya adalah penyedia layanan tersebut.",
             "Hindari file instalasi dari situs yang tidak dikenal."
+          ],
+          "paras": [
+            "Untuk pencarian «aplikasi IDLIX» atau APK, baca /aplikasi-resmi-bukan-apk/ . Bandingkan layanan sebagai alternatif: /alternatif-idlix/ ."
           ]
         }
       ],
@@ -440,10 +563,10 @@
     {
       "slug": "aplikasi-resmi-bukan-apk",
       "navLabel": "Aplikasi resmi, bukan APK",
-      "title": "IDLIX App? Pakai aplikasi resmi, jangan unduh APK tidak dikenal",
-      "description": "Jawaban untuk pencarian aplikasi IDLIX: situs ini tidak menyediakan APK. Gunakan aplikasi resmi dari toko perangkat.",
+      "title": "Aplikasi IDLIX? Pakai App Resmi — Jangan Unduh APK Tidak Dikenal",
+      "description": "Aplikasi IDLIX / idlix aplikasi: jangan unduh APK tidak dikenal. Pakai Vidio, WeTV, Viu, Netflix dari Google Play atau App Store. Kami tidak menyediakan APK.",
       "h1": "Mencari aplikasi IDLIX? Jangan pasang APK tidak resmi",
-      "intro": "IDLIX bukan layanan berlisensi, dan file APK yang mengatasnamakannya sering berisi iklan berbahaya. Yang aman adalah aplikasi resmi layanan streaming, diunduh dari toko perangkat.",
+      "intro": "Kalau Anda mencari «aplikasi IDLIX» atau «idlix aplikasi», berhenti sebelum memasang apa pun. Kami tidak menyediakan atau menautkan file APK itu. Yang aman adalah aplikasi resmi Vidio, WeTV, Viu, Netflix, atau Vision+ dari Google Play, App Store, atau toko Smart TV.",
       "platforms": [
         "Vidio",
         "WeTV",
@@ -454,32 +577,68 @@
       "platformsHeading": "Aplikasi resmi yang bisa dipasang",
       "sections": [
         {
-          "h2": "Kenapa APK berisiko",
-          "bullets": [
-            "Bukan dari toko resmi, jadi tidak ada pemeriksaan malware yang sama.",
-            "Sering meminta izin notifikasi, akses file, atau pemasangan sumber tidak dikenal.",
-            "Nama aplikasinya mirip layanan terkenal, pengembangnya bukan pemilik layanan."
+          "h2": "Apa arti pencarian «aplikasi IDLIX»",
+          "paras": [
+            "Orang yang mengetik aplikasi IDLIX atau idlix aplikasi biasanya ingin app Android/iOS berisi «semua film». File APK yang mengatasnamakan IDLIX hampir tidak pernah dari pemegang hak: sering beredar lewat Telegram, iklan, atau blog, lalu berganti tautan saat yang lama mati.",
+            "Halaman ini menangkap niat itu. Beranda IDLIX ringkas merek; di sini kami tegaskan risiko dan jalur resmi."
           ]
         },
         {
-          "h2": "Cara memasang yang benar",
+          "h2": "Kenapa APK tidak dikenal berisiko",
+          "paras": [
+            "APK di luar Google Play atau toko pabrikan meminta izin berlebih, bisa menyisipkan iklan agresif atau malware, dan tidak punya dukungan dari Vidio/Netflix/WeTV."
+          ],
+          "bullets": [
+            "Bukan dari toko resmi — tidak ada pemeriksaan malware yang sama.",
+            "Sering meminta izin notifikasi, akses file, atau «sumber tidak dikenal».",
+            "Nama mirip layanan terkenal, pengembangnya bukan pemilik layanan.",
+            "Tautan cepat mati atau diganti domain lain."
+          ]
+        },
+        {
+          "h2": "Apa yang dipasang sebagai gantinya (toko resmi)",
+          "paras": [
+            "Unduh Vidio, WeTV, Viu, iQIYI, Netflix, Vision+, atau Prime Video dari Google Play / App Store / toko Smart TV. Cocokkan nama pengembang dengan pemilik layanan sebelum memasang. Ringkasan app: /aplikasi-streaming-film/ ."
+          ],
+          "bullets": [
+            "Jangan pasang APK dari Telegram, WhatsApp, atau iklan pop-up.",
+            "Jika «aplikasi resmi» hanya tersedia sebagai file .apk dari blog, itu bukan jalur yang benar.",
+            "Panduan ini tidak menayangkan video dan tidak menautkan APK."
+          ]
+        },
+        {
+          "h2": "Kalau sudah terlanjur memasang «APK IDLIX»",
           "steps": [
-            "Buka Google Play, App Store, atau toko Smart TV.",
-            "Cari nama layanan resminya, bukan “IDLIX”.",
-            "Cocokkan nama pengembang dengan pemilik layanan sebelum memasang."
+            "Hapus aplikasi dari Pengaturan → Aplikasi.",
+            "Cabut izin aneh (aksesibilitas, pemasang paket, overlay).",
+            "Ganti kata sandi akun yang sempat diketik di sana.",
+            "Jalankan antivirus dari toko resmi jika sempat unduh file lain.",
+            "Baca juga /idlix-aman-atau-tidak/ dan gunakan /alternatif-idlix/ untuk platform legal."
           ]
         },
         {
           "h2": "Kalau yang dicari drama Korea",
           "paras": [
-            "Viu, WeTV, dan iQIYI punya katalog drama dengan subtitle Indonesia. Cek judulnya di aplikasi resmi sebelum berlangganan. Situs ini tidak menayangkan video."
+            "Viu, WeTV, dan iQIYI punya katalog drama dengan subtitle Indonesia. Cek judulnya di aplikasi resmi sebelum berlangganan. Detail: /nonton-drama-korea-legal/ . Situs ini tidak menayangkan video."
           ]
         }
       ],
       "faq": [
         {
-          "q": "Apakah idlix.fun menyediakan file instalasi?",
+          "q": "Apakah idlix.fun menyediakan file instalasi / APK?",
           "a": "Tidak. Kami tidak meng-host APK, tidak menautkan ke situs tanpa lisensi, dan tidak menyiarkan film."
+        },
+        {
+          "q": "Di mana aplikasi resmi?",
+          "a": "Vidio, WeTV, Viu, Netflix, Vision+ memublikasikan app di situs dan toko aplikasi masing-masing. Tidak perlu APK pihak ketiga bernama IDLIX."
+        },
+        {
+          "q": "Apakah «aplikasi IDLIX» sama dengan app resmi streaming?",
+          "a": "Tidak. Tidak ada aplikasi resmi pemegang hak dengan nama generik situs bajakan itu. Nama pencarian sengaja membingungkan."
+        },
+        {
+          "q": "Bagaimana nonton tanpa APK?",
+          "a": "Pakai situs atau app resmi. Lihat /alternatif-idlix/ , /nonton-film-gratis-legal/ , dan /aplikasi-streaming-film/ ."
         }
       ]
     }
