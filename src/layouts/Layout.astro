@@ -2,6 +2,7 @@
 import "../styles/global.css";
 import site from "../data/site.json";
 import { ads } from "../config/ads";
+import CfComments from "../components/CfComments.astro";
 
 interface Props { title: string; description: string; jsonLd?: object[]; noindex?: boolean; hero?: string }
 const { title, description, jsonLd = [], noindex = false, hero } = Astro.props;
@@ -58,6 +59,7 @@ const year = new Date().getFullYear();
     <main id="main" class="relative z-[1] mx-auto max-w-6xl px-5 pb-20 pt-6">
       <slot />
     </main>
+    <CfComments />
     <footer class="site-footer">
       <div class="mx-auto max-w-6xl px-5 py-10 text-sm text-zinc-500">
         <p class="max-w-3xl leading-6">{site.ui.footerDisclaimer}</p>
